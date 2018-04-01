@@ -8,6 +8,12 @@ class Category_model extends CI_Model {
         $this->db->order_by('descategory', 'ASC');
         return $query = $this->db->get()->result();
     }
+    public function getCategory($idcategory) {
+        $this->db->select('*');
+        $this->db->from('tb_categories');
+        $this->db->where('idcategory', $idcategory);
+        return $query = $this->db->get()->result();        
+    }
 
     public function salvar() {
         $descategory = $this->input->post("descategory");
