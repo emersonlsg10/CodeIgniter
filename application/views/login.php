@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -33,7 +33,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form action="<?php echo base_url("index.php/login/logar")?>" method="post">
+    <form action="<?php echo base_url("index.php/acesso/entrar")?>" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Login" name="login">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -53,9 +53,10 @@
         <!-- /.col -->
         <div class="col-xs-4">
           <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-<!--           <? if (isset($erro)): ?>
-			<div class="alert alert-danger" role="alert" style="margin-top: 10px;"><?= $erro; ?></div>
-		<? endif; ?>-->
+          <?php if (isset($erro)){
+              echo "<div class='alert alert-danger' role='alert' style='margin-top: 10px;'>$erro</div>";
+          } ?>
+			
         </div>
         <!-- /.col -->
       </div>
@@ -70,7 +71,7 @@
     </div>
     <!-- /.social-auth-links -->
 
-    <a href="#">I forgot my password</a><br>
+    <a href="<?php echo base_url("index.php/forgot/index") ?>">Esqueceu sua senha?</a><br>
     <a href="register.html" class="text-center">Register a new membership</a>
 
   </div>

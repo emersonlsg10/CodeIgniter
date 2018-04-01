@@ -209,7 +209,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <a href="#" class="btn btn-default btn-flat">Profile</a>
                                         </div>
                                         <div class="pull-right">
-                                            <a href="<?php echo base_url("index.php/login/logout") ?>" class="btn btn-default btn-flat">Sign out</a>
+                                            <a href="<?php echo base_url("index.php/acesso/sair") ?>" class="btn btn-default btn-flat">Sair</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -256,8 +256,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <ul class="sidebar-menu">
                         <li class="header">HEADER</li>
                         <!-- Optionally, you can add icons to the links -->
-                        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-                        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+                        <li class="active"><a href="<?php echo base_url("index.php/admin/users") ?>"><i class="fa fa-users"></i> <span>Usuários</span></a></li>
+                        <li><a href="<?php echo base_url("index.php/categories") ?>"><i class="fa fa-link"></i> <span>Categorias</span></a></li>
                         <li class="treeview">
                             <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
                                 <span class="pull-right-container">
