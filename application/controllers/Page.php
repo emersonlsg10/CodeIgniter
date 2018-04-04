@@ -7,7 +7,9 @@ class Page extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model("Category_model", "category");
+        $this->load->model("Products_model", "products");
         $this->data['categories'] = $this->category->listAll();
+        $this->data['products'] = $this->products->listAll();
     }
 
     public function index() {
