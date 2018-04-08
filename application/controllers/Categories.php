@@ -38,4 +38,22 @@ class Categories extends CI_Controller {
         redirect("categories/index");
     }
 
+    public function products($idcategory) {
+        $data['productsRelated'] = $this->category->getProducts((int) $idcategory, $related = true);
+        $data['productsNoRelated'] = $this->category->getProducts((int) $idcategory, $related = false);
+//       var_dump($data);exit;
+        $data['categories'] = $this->category->getCategory($idcategory);
+        $this->template->load("template/template_admin", "contents_admin/categories-products", $data);
+    }
+
+    public function add() {
+        $id = (int) $this->category->addProduct();
+        $this->products($id);
+    }
+
+    public function remove() {
+        $id =(int) $this->category->removeProduct();
+        $this->products($id);
+    }
+
 }

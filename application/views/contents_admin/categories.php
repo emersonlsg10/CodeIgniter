@@ -28,7 +28,7 @@
                                 <tr>
                                     <th style="width: 10px">#</th>
                                     <th>Nome da Categoria</th>
-                                    <th style="width: 140px">&nbsp;</th>
+                                    <th style="width: 240px">&nbsp;</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,6 +38,7 @@
                                     echo "<td>$value->idcategory</td>";
                                     echo "<td>$value->descategory</td>";
                                     echo "<td>"
+                                    . "<a href='" . base_url("index.php/categories/products/$value->idcategory") . "' class='btn btn-default btn-xs'><i class='fa fa-edit'></i> Produtos</a>"
                                     . "<a href='" . base_url("index.php/categories/update/$value->descategory") . "' class='btn btn-primary btn-xs'><i class='fa fa-edit'></i> Editar</a>"
                                     . "<a href='" . base_url("index.php/categories/delete/$value->idcategory") . "' onclick='return confirm('Deseja realmente excluir este registro?')' class='btn btn-danger btn-xs'><i class='fa fa-trash'></i> Excluir</a>"
                                     . "</td>";
