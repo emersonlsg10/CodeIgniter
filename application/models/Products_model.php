@@ -105,4 +105,17 @@ class Products_model extends CI_Model {
         imagejpeg($image, $dist);
         imagedestroy($image);
     }
+    public function getFromUrl($desurl) {
+        $this->db->select("*");
+        $this->db->from("tb_products");
+        $this->db->where("desurl", $desurl);
+        return $this->db->get()->result_array();
+    }
+    public function getCategoriesProducts($id) {
+        $this->db->select("*");
+        $this->db->from("tb_categories a");
+        $this->db->join('tb_productscategories as b', 'a.idcategory = b.idcategory', 'inner');
+        $this->db->where("b.idproduct", $id);
+        return $this->db->get()->result_array();
+    }
 }

@@ -91,7 +91,7 @@
                             echo "<img src='". base_url("resources/site/img/products/$value->idproduct.jpg")."' alt=''>";
                             echo "<div class='product-hover'>";
                             echo "<a href='#' class='add-to-cart-link'><i class='fa fa-shopping-cart'></i> Adicionar ao carrinho</a>";
-                            echo "<a href='#' class='view-details-link'><i class='fa fa-link'></i> Ver detalhes</a>";
+                            echo "<a href='". base_url("index.php/page/product/$value->desurl")."' class='view-details-link'><i class='fa fa-link'></i> Ver detalhes</a>";
                             echo "</div>
                             .</div>";
                             echo "<h2><a href='#'>$value->desproduct</a></h2>";

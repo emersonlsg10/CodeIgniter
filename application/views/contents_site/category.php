@@ -22,7 +22,7 @@
         echo "<div class='product-upper'>";
         echo "<img src='".base_url("resources/site/img/products/").$data[$i]['idproduct'].".jpg"."' alt=''>";
         echo "</div>";
-        echo "<h2><a href='".base_url("index.php/page/products/").$data[$i]['idproduct']."'>".$data[$i]['desproduct']."</a></h2>";
+        echo "<h2><a href='".base_url("index.php/page/product/").$data[$i]['desurl']."'>".$data[$i]['desproduct']."</a></h2>";
         echo "<div class='product-carousel-price>'";
         echo "<ins>".$data[$i]['vlprice']."</ins> <del></del>";
         echo "</div>";
